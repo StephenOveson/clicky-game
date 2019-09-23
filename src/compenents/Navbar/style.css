@@ -17,3 +17,12 @@
 .navBar > .gameText {
     text-align: left;
 }
+
+.gameTitle {
+    color: white;
+    text-align: left;
+}
+
+.gameTitle:hover {
+    color: #000;
+}

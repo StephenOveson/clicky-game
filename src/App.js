@@ -6,6 +6,7 @@ import Card from './compenents/ClickCards/index'
 import ClickCards from './cards.json'
 import Navbar from './compenents/Navbar/index'
 import Footer from './compenents/Footer/index'
+import Header from './compenents/Header/index'
 
 class App extends Component {
   state = {
@@ -37,7 +38,8 @@ class App extends Component {
   render() {
     return (
       <>
-        <Navbar game={this.state.game} score={this.state.score} highScore={this.state.highScore} />
+        <Navbar score={this.state.score} highScore={this.state.highScore} />
+        <Header game={this.state.game} />
         <Wrapper>
           {this.state.ClickCards.map(card => <Card image={card.image} key={card.id} name={card.name} id={card.id} handleScore={this.handleScore} />)}
         </Wrapper>
