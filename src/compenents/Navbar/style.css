@@ -1,0 +1,19 @@
+.navBar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 1rem 0 1rem 0;
+    background: rgb(126, 32, 163);
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    text-align: right;
+    color: #fff;
+}
+
+.navBar > .pointField {
+    margin: 1rem;
+}
+
+.navBar > .gameText {
+    text-align: left;
+}
