@@ -8,6 +8,8 @@ import Navbar from './compenents/Navbar/index'
 import Footer from './compenents/Footer/index'
 import Header from './compenents/Header/index'
 
+let correctGuess = 0;
+
 class App extends Component {
   state = {
     score: 0,
@@ -20,17 +22,20 @@ class App extends Component {
   handleScore = (id) => {
     let clickedArray = this.state.clickedArray;
     if (clickedArray.includes(id)) {
+      correctGuess = 0;
       this.setState({ clickedArray: [], score: 0, game: "Game OVER! Try harder! Click on any card to start a new game" })
     } else {
       clickedArray.push(id);
       this.setState({ score: this.state.score + 1, game: "" });
+      correctGuess++
       if (clickedArray.length === 12) {
         this.setState({ score: 12, game: "You WON!", clickedArray: [] })
       }
+      if (correctGuess > this.state.highScore) {
+        this.setState({ highScore: correctGuess })
+      }
     }
-    if (this.state.score > this.state.highScore) {
-      this.setState({ highScore: this.state.score })
-    }
+
     const Shuffled = this.state.ClickCards.sort(() => Math.random() - 0.5)
     this.setState({ ClickCards: Shuffled })
   }
