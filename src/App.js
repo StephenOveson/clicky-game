@@ -29,7 +29,7 @@ class App extends Component {
       this.setState({ score: this.state.score + 1, game: "" });
       correctGuess++
       if (clickedArray.length === 12) {
-        this.setState({ score: 12, game: "You WON!", clickedArray: [] })
+        this.setState({ game: "You WON!", clickedArray: [] })
       }
       if (correctGuess > this.state.highScore) {
         this.setState({ highScore: correctGuess })
