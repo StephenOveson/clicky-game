@@ -1,9 +1,10 @@
 .footer {
+    position: fixed;
+    bottom: 0;
     width: 100%;
     background: rgb(126, 32, 163);
-    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    box-shadow: 3px 3px 12px #999, 3px 3px 12px #999;
     text-align: center;
-    position: relative;
     color: #fff;
     overflow: auto;
 }
@@ -12,7 +13,6 @@
     width: 30px;
     top: 3px;
     left: 2px;
-    position: relative;
 }
 
 .footerFont {
@@ -22,5 +22,10 @@
     right: 0;
     padding: 8px;
     font-weight: 600;
-    position: relative;
+}
+
+@media only screen and (max-width: 1024px) {
+    .footer {
+        position: sticky
+    }
 }

@@ -18,3 +18,16 @@
   width: 100%;
   height: 100%;
 }
+
+@media only screen and (max-width: 720px) {
+ .card {
+  background: #fff;
+  border-radius: 1px;
+  height: 150px;
+  margin: 0.5rem 0rem 0.5rem 0rem;
+  position: relative;
+  width: 100px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  padding: 0.1rem
+ }
+}
